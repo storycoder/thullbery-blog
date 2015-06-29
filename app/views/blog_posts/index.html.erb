@@ -4,17 +4,21 @@
       <div class="col-md-6">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <%= blog_post.title %>
+            <%= link_to blog_post.title, blog_post %>
           </div>
           <div class="panel-body">
-            <%= blog_post.author %>
-            <%= blog_post.blog_entry %>
+            <%= blog_post.author %><br />
+            <p><%= blog_post.blog_entry[0..250] %>...[<%= 
+            link_to "READ MORE", blog_post %>]</p>
           </div>
-            <%= link_to 'Show', blog_post %>
-            <%= link_to 'Edit', edit_blog_post_path(blog_post) %></td>
-            <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <div class="panel-footer">
+            <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-warning" %>
+            <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          </div>
+        </div>
+      </div>
     <% end %>
-    
+  </div>
 
 <br>
 
