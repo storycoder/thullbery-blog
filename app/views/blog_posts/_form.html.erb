@@ -17,7 +17,7 @@
   </div>
   <div class="form-group">
     <%= f.label :blog_entry, class: "sr-only" %>
-    <%= f.text_area :blog_entry, class: "form-control", rows: 10, placeholder: "Speak Your Mind!" %>
+    <%= f.text_area :blog_entry, class: "form-control", placeholder: "Speak Your Mind!", rows: 10 %>
   </div>
   <div class="form-group cant-see-me">
     <%= f.number_field :user_id, value: current_user.id %>
